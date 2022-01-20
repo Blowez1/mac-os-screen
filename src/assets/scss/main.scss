@@ -1,0 +1,275 @@
+@import "./_fonts.scss";
+@import "./_reboot.scss";
+
+body {
+    font-family: 'San Francisco';
+    background: url("./assets/img/background.jpg") fixed center center no-repeat;
+    background-size: cover;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    width: 100%;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: -2px -6px 20px 1px rgb(31 38 135 / 37%);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.icon {
+    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.3));
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    list-style-type: none;
+
+    li {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+}
+
+.date {
+    color: #fff;
+    font-weight: 500;
+    margin-left: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 25px);
+    display: flex;
+    justify-content: center;
+}
+
+.tab {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    max-height: 680px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    margin-top: 128px;
+
+    &__header {
+        width: 100%;
+        padding: 0 24px;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        position: relative;
+
+        .first {
+            display: flex;
+            align-items: center;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+
+            span {
+                width: 15px;
+                height: 15px;
+                cursor: pointer;
+                border-radius: 50%;
+
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+
+                &:nth-child(1) {
+                    background-color: #FF6359;
+                    border: 1.2px solid #FA463A;
+                }
+
+                &:nth-child(2) {
+                    background-color: #F7BF2B;
+                    border: 1.2px solid #E9B11E;
+                }
+
+                &:nth-child(3) {
+                    background-color: #34C546;
+                    border: 1.2px solid #24BA36;
+                }
+            }
+        }
+
+        .arrows {
+            display: flex;
+            align-items: center;
+
+            svg {
+                stroke: #878787;
+                cursor: pointer;
+
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+
+                &.active {
+                    opacity: 0.5;
+                }
+            }
+
+
+        }
+
+        .search-area {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &__input {
+                border-radius: 5px;
+                margin-left: 23px;
+                position: relative;
+                background-color: #F2F2F2;
+                border: 1.3px solid #EAEAEA;
+                width: 450px;
+                height: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    margin-left: 8px;
+                    font-weight: 500;
+                    color: #878787;
+                }
+
+                .reload--button {
+                    position: absolute;
+                    right: 4px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .tab-nav {
+            display: flex;
+            align-items: center;
+
+            svg {
+                &:not(:last-child) {
+                    margin-right: 22px;
+                }
+
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__content {
+        background: url("./assets/img/tab-background.jpg") center center no-repeat;
+        background-size: cover;
+        justify-content: center;
+
+        &__box {
+            padding: 165px 140px;
+
+            &--title {
+                font-size: 25px;
+                text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+                color: #fff;
+                font-weight: 700;
+                margin-bottom: 17px;
+            }
+
+            .row {
+                &:not(:last-child) {
+                    margin-bottom:50px;
+                }
+
+                .brands {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    &__item {
+                        &:not(:last-child) {
+                            margin-right: 17.5px;   
+                        }
+
+                        cursor: pointer;
+
+                        &__title {
+                            font-size: 13px;
+                            font-weight: 500;
+                            color: #fff;
+                            text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+                            margin-top: 10px;
+                            text-align: center;
+                        }
+
+                    }
+                }
+
+                .report-alerts {
+                    display: flex;
+                    flex-direction: column;
+                    &__item {
+                        display: flex;
+                        align-items: center;
+                        padding: 28px 30px;
+                        background: rgba( 255, 255, 255, 0.05 );
+                        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                        backdrop-filter: blur( 20px );
+                        border-radius: 10px;
+                        &:not(:last-child) {
+                            margin-bottom: 20px;
+                        }
+    
+                        svg {
+                            fill: #fff;
+                        }
+    
+                        p {
+                            margin-left: 23px;
+                            text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

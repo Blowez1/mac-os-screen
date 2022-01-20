@@ -1,0 +1,6 @@
+<template>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4.23071" y="4.23077" width="10.7692" height="10.7692" rx="2" stroke="#878787" stroke-width="1.3"/>
+<path d="M11.7692 4.23077V3C11.7692 1.89543 10.8738 1 9.76923 1H3C1.89543 1 1 1.89543 1 3V9.76923C1 10.8738 1.89543 11.7692 3 11.7692H4.23077" stroke="#878787" stroke-width="1.3"/>
+</svg>
+</template>
